@@ -188,7 +188,7 @@ const boardsSlice = createSlice({
     sort: (state, {payload}:PayloadAction<TSortAction>) => {
       // 같은 리스트인 경우
       if(payload.droppableIdStart === payload.droppableIdEnd){
-        const board = state.boardArray[payload.boardIndex];
+        // const board = state.boardArray[payload.boardIndex];
         const list = state.boardArray[payload.boardIndex].lists.find(
           list=> list.listId === payload.droppableIdStart
         )
@@ -205,7 +205,9 @@ const boardsSlice = createSlice({
         const listEnd = state.boardArray[payload.boardIndex].lists.find(
           list => list.listId === payload.droppableIdEnd
         )
-        listEnd?.tasks.splice(payload.droppableIndexEnd, 0, ...card);
+
+        if (card)
+          listEnd?.tasks.splice(payload.droppableIndexEnd, 0, ...card);
       }
   }
 }});

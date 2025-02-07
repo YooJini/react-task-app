@@ -67,8 +67,8 @@ function App() {
         boardIndex: boards.findIndex((board) => board.boardId === activeBoardId),
         droppableIdStart: source.droppableId,
         droppableIdEnd: destination.droppableId,
-        dropaindexStart: source.index,
-        dropaindexEnd: destination.index,
+        droppableIndexStart: source.index,
+        droppableIndexEnd: destination.index,
         draggableId
       }));
 

@@ -1,7 +1,7 @@
-import React, { FC } from "react";
 import { ILogItem } from "../../../types";
 import { BsFillPersonFill } from "react-icons/bs";
 import { author, date, logItemWrap, message } from "./LogItem.css";
+import { FC } from "react";
 
 type TLogItemProps = {
   logItem: ILogItem;
